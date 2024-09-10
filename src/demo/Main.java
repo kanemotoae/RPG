@@ -22,8 +22,7 @@ public class Main {
 		Brave brave = new Brave("沖田総司", "剣");
 		Fighter fighter = new Fighter("金太郎", "斧");
 		Wizard wizard = new Wizard("安倍晴明", "魔法");
-		
-		
+
 		// 人間グループのリストを空で生成
 		List<Human> humans = new ArrayList<>();
 
@@ -59,10 +58,10 @@ public class Main {
 			System.out.println("\n[人間のターン！]\n");
 
 			// 人間グループから1人選択
-			human = choiceHuman(humans);
+			Human human = choiceHuman(humans);
 
 			// モンスターグループから1人選択
-			monster = choiceMonster(monsters);
+			Monster monster = choiceMonster(monsters);
 
 			// 選ばれた人間が、選ばれたモンスターを攻撃
 			human.attack(monster);
