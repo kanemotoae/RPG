@@ -5,9 +5,9 @@ public abstract class Monster extends Living {
 
 	// コンストラクタ
 
-	public Monster(String name, String weapon){
-			super(name, weapon);// Livingクラスで定義したコンストラクタを利用する
-		}
+	public Monster(String name, String weapon) {
+		super(name, weapon);// Livingクラスで定義したコンストラクタを利用する
+	}
 
 	// attackメソッドのオーバーライド
 	@Override
@@ -15,11 +15,10 @@ public abstract class Monster extends Living {
 		int damage = utils.Dice.get(1, 10) * this.offensive;// 1から10までのサイコロを振り、自分の攻撃力とかけ合わせた値を相手に与えるダメージとする
 
 		target.setHp(target.getHp() - damage);// 相手のHPをダメージ値だけ減らす
-		this.offensive--;
 
 		// コンソールにステータスを表示
 		System.out.println(
 				this.getName() + "が" + this.getWeapon() + "で攻撃！" + target.getName() + "に" + damage + "のダメージを与えた。");
-		System.out.println("しかし自分の攻撃力も1減少した。");
+
 	}
 }
