@@ -68,13 +68,14 @@ public class Main {
 
 			// モンスターのHPが0以下になれば、モンスターは倒れ、そのモンスターをモンスターグループから削除
 			if (monster.getHp() <= 0) {
-				System.out.printf("モンスター 「%s」 が倒れた！\n", monster.getName());
+				System.out.printf("★モンスター 「%s」 は倒れた。\n", monster.getName());
 				monsters.remove(monster);
 			}
 
 			// モンスターグループに誰もいなくなれば、人間グループの勝利
 			if (monsters.isEmpty()) {
-				System.out.println("\n[人間グループの勝利だ！]");
+				System.out.println("★★ ==== 決着がついた！！ ==== ★★");
+				System.out.println("\n#### 人間達は勝利した！！ ####");
 				break;
 			}
 
@@ -91,13 +92,14 @@ public class Main {
 
 			// 人間のHPが0以下になれば、人間は倒れ、その人間をモンスターグループから削除
 			if (human.getHp() <= 0) {
-				System.out.printf("人間 「%s」 が倒れた！\n", human.getName());
+				System.out.printf("★人間 「%s」 は倒れた。\n", human.getName());
 				humans.remove(human);
 			}
 
 			// 人間グループに誰もいなくなれば、人間グループの敗北
 			if (humans.isEmpty()) {
-				System.out.println("\n[モンスターグループの勝利だ！]");
+				System.out.println("★★ ==== 決着がついた！！ ==== ★★");
+				System.out.println("\n#### モンスター達は勝利した！！ ####");
 				break;
 			}
 
@@ -141,5 +143,4 @@ public class Main {
 			System.out.println(monster);
 		}
 	}
-
 }

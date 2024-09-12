@@ -21,8 +21,8 @@ public class Fighter extends Human {
 		target.setHp(target.getHp() - damage);
 		this.offensive--;
 
-		System.out.println(
-				this.getName() + "が" + this.getWeapon() + "で攻撃！" + target.getName() + "に" + damage + "のダメージを与えた。");
+		System.out.println("「" + this.getName() + "」" + "が" + "「" + this.getWeapon() + "」" + "で攻撃！" + "「"
+				+ target.getName() + "」" + "に" + damage + "のダメージを与えた。");
 		System.out.println("しかし自分の攻撃力も1減少した。");
 	}
 }
