@@ -24,8 +24,8 @@ public abstract class Human extends Living {
 
 		// コンソールにステータスを表示
 		// thisは今のキャラクター(人間)を指す。gerName()はそのキャラクターの名前を取得するメソッド。
-		System.out.println(
-				this.getName() + "が" + this.getWeapon() + "で攻撃！" + target.getName() + "に" + damage + "のダメージを与えた。");
+		System.out.println("「" + this.getName() + "」" + "が" + "「" + this.getWeapon() + "」" + "で攻撃！" + "」" + "「"
+				+ target.getName() + "」" + "に" + damage + "のダメージを与えた。");
 		System.out.println("しかし自分の攻撃力も1減少した。"); // コンソールにステータスを表示
 
 	}
