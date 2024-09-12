@@ -49,6 +49,9 @@ public class Main {
 
 		// 第何回戦かを示すカウンター変数
 		int count = 1;
+		
+		Human human;
+		Monster monster;
 
 		// 勝敗がつくまで無限ループ
 		while (true) {
