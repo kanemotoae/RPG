@@ -1,6 +1,5 @@
 package monsters;
 
-import bases.Living;
 import bases.Monster;
 import utils.Dice;
 
@@ -11,15 +10,5 @@ public class Slime extends Monster {
 		super(name, weapon);
 		this.hp = Dice.get(70, 130); // ヒットポイントをランダムに設定
 		this.offensive = Dice.get(5, 11); // 攻撃力をランダムに設定
-	}
-
-	// attackメソッドの実装
-	@Override
-	public void attack(Living target) {
-		int damage = Dice.get(1, 10) * this.offensive;
-		target.setHp(target.getHp() - damage);
-
-		System.out.println("「" + this.getName() + "」" + "が" + "「" + this.getWeapon() + "」" + "で攻撃！" + "「"
-				+ target.getName() + "」" + "に" + damage + "のダメージを与えた。");
 	}
 }
