@@ -1,5 +1,7 @@
 package bases;
 
+import utils.Dice;
+
 // モンスターを表現する抽象クラス
 public abstract class Monster extends Living {
 
@@ -12,7 +14,7 @@ public abstract class Monster extends Living {
 	// attackメソッドのオーバーライド
 	@Override
 	public void attack(Living target) {
-		int damage = utils.Dice.get(1, 10) * this.offensive;// 1から10までのサイコロを振り、自分の攻撃力とかけ合わせた値を相手に与えるダメージとする
+		int damage = Dice.get(1, 10) * this.offensive;// 1から10までのサイコロを振り、自分の攻撃力とかけ合わせた値を相手に与えるダメージとする
 
 		target.setHp(target.getHp() - damage);// 相手のHPをダメージ値だけ減らす
 

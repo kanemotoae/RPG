@@ -1,5 +1,7 @@
 package bases; //basesというフォルダの中にこのプログラムが入っていることを示す。
 
+import utils.Dice;
+
 //人間を表現する抽象クラス(＝処理を記述しない、abstractを指定)
 //人間というキャラクターを作るための設計図を作る。Livingという他の設計図をもとにして人間の特徴を追加する。
 public abstract class Human extends Living {
@@ -16,7 +18,7 @@ public abstract class Human extends Living {
 
 		// 1から10までのサイコロを振る(Diceクラスを利用する)、
 		// 自分の攻撃力とかけ合わせた値を相手に与えるダメージとする
-		int damage = utils.Dice.get(1, 10) * this.offensive;
+		int damage = Dice.get(1, 10) * this.offensive;
 
 		target.setHp(target.getHp() - damage);// 相手のHPをダメージ値だけ減らす
 

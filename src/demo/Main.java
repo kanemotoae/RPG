@@ -50,6 +50,9 @@ public class Main {
 		// 第何回戦かを示すカウンター変数
 		int count = 1;
 
+		Human human;
+		Monster monster;
+
 		// 勝敗がつくまで無限ループ
 		while (true) {
 
@@ -58,10 +61,10 @@ public class Main {
 			System.out.println("\n[人間のターン！]\n");
 
 			// 人間グループから1人選択
-			Human human = choiceHuman(humans);
+			human = choiceHuman(humans);
 
 			// モンスターグループから1人選択
-			Monster monster = choiceMonster(monsters);
+			monster = choiceMonster(monsters);
 
 			// 選ばれた人間が、選ばれたモンスターを攻撃
 			human.attack(monster);
